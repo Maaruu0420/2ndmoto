@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>映象車業 — 買賣車頁面 Wireframe</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #F5A623;
+    --orange-deep: #E89211;
+    --navy: #1a2540;
+    --navy-deep: #0f1729;
+    --line: #06C755;
+    --bg: #F4F5F7;
+    --gray-50: #F8F9FA;
+    --gray-100: #EFF1F4;
+    --gray-200: #E2E4E9;
+    --gray-500: #8890A4;
+    --gray-700: #4A5068;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: var(--bg);
+    color: #1e2235;
+    padding: 40px 24px 80px;
+    line-height: 1.65;
+  }
+  .wrapper { max-width: 1240px; margin: 0 auto; }
+
+  /* 文件標題 */
+  .doc-header {
+    background: var(--navy);
+    color: white;
+    padding: 24px 32px;
+    border-radius: 12px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .doc-header .badge {
+    background: var(--orange);
+    color: white;
+    width: 42px; height: 42px;
+    border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px; font-weight: 900;
+  }
+  .doc-header h1 {
+    font-size: 18px; font-weight: 700;
+    margin-bottom: 3px;
+  }
+  .doc-header .sub {
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.55);
+  }
+  .doc-header .meta {
+    margin-left: auto;
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.45);
+    font-family: 'DM Mono', monospace;
+    text-align: right;
+    line-height: 1.7;
+  }
+
+  /* 區段標題 */
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 40px 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--navy);
+  }
+  .section-title .num {
+    background: var(--navy);
+    color: white;
+    width: 30px; height: 30px;
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 13px;
+  }
+  .section-title h2 {
+    font-size: 17px; font-weight: 700;
+    color: var(--navy);
+  }
+  .section-title .tag {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--gray-500);
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* 兩欄佈局 */
+  .layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 22px;
+    align-items: start;
+  }
+
+  /* 桌機 frame */
+  .browser-frame {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(26,37,64,0.08), 0 1px 3px rgba(26,37,64,0.06);
+    border: 1px solid var(--gray-200);
+  }
+  .browser-bar {
+    background: var(--gray-100);
+    padding: 9px 14px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .browser-bar .dot {
+    width: 9px; height: 9px; border-radius: 50%;
+    background: #DDE0E5;
+  }
+  .browser-bar .dot:nth-child(1) { background: #FF5F57; }
+  .browser-bar .dot:nth-child(2) { background: #FEBC2E; }
+  .browser-bar .dot:nth-child(3) { background: #28C840; }
+  .browser-bar .url {
+    margin-left: 10px;
+    flex: 1;
+    background: white;
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11.5px;
+    color: var(--gray-700);
+    text-align: center;
+  }
+
+  /* 手機殼 */
+  .phone-frame {
+    background: var(--navy-deep);
+    border-radius: 30px;
+    padding: 10px 8px;
+    box-shadow: 0 8px 28px rgba(26,37,64,0.18);
+    width: 380px;
+  }
+  .phone-screen {
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    position: relative;
+  }
+  .phone-notch {
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 110px; height: 20px;
+    background: var(--navy-deep);
+    border-radius: 0 0 13px 13px;
+    z-index: 10;
+  }
+
+  /* nav */
+  .nav-bar {
+    background: var(--orange);
+    padding: 12px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .phone-screen .nav-bar { padding: 26px 16px 12px; }
+  .nav-logo {
+    display: flex; align-items: center; gap: 7px;
+    color: white;
+  }
+  .nav-logo .ic {
+    width: 26px; height: 26px;
+    background: white;
+    border-radius: 5px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--orange);
+    font-size: 13px; font-weight: 900;
+  }
+  .nav-logo .nm {
+    font-size: 12.5px; font-weight: 700; letter-spacing: 0.05em;
+  }
+  .nav-menu {
+    display: flex; gap: 20px;
+    color: white;
+    font-size: 12px; font-weight: 500;
+  }
+  .nav-burger {
+    color: white; font-size: 18px;
+  }
+
+  /* 頁面主標 */
+  .page-title-row {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 34px 22px 10px;
+  }
+  .page-title-row .dot-icon {
+    display: flex; gap: 2px;
+  }
+  .page-title-row .dot-icon span {
+    display: block;
+    background: var(--orange);
+    border-radius: 50%;
+  }
+  .page-title-row .dot-icon span:nth-child(1){ width: 15px; height: 15px; }
+  .page-title-row .dot-icon span:nth-child(2){ width: 19px; height: 19px; }
+  .page-title-row h2 {
+    font-size: 22px; font-weight: 900;
+    color: var(--navy);
+  }
+  .phone-screen .page-title-row { padding: 24px 16px 8px; }
+  .phone-screen .page-title-row h2 { font-size: 19px; }
+
+  /* ───── 新增區塊本體(極簡版) ───── */
+  .new-block {
+    padding: 28px 32px 32px;
+    position: relative;
+    /* 用最淺的橘色虛線標示「這是新增的」,實際上線可移除 */
+    outline: 2px dashed rgba(245,166,35,0.45);
+    outline-offset: -2px;
+    background: #FFFfff;
+  }
+  .new-block .new-tag {
+    position: absolute;
+    top: 8px; right: 8px;
+    background: var(--orange);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.1em;
+    font-family: 'DM Mono', monospace;
+  }
+  .new-block .h-orange-bar {
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--orange);
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+  .new-block .heading-plain {
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+  .new-block .lead {
+    color: var(--gray-700);
+    font-size: 14px;
+    line-height: 1.85;
+    margin-bottom: 14px;
+  }
+  .new-block .lead strong { color: var(--navy); font-weight: 700; }
+  .new-block .lead .em { color: var(--orange-deep); font-weight: 700; }
+  .new-block p {
+    color: var(--gray-700);
+    font-size: 14px;
+    line-height: 1.85;
+    margin-bottom: 12px;
+  }
+  .new-block p:last-of-type { margin-bottom: 0; }
+  .new-block p strong { color: var(--navy); font-weight: 700; }
+  .new-block p .em { color: var(--orange-deep); font-weight: 700; }
+  .new-block .info-row {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 6px 12px;
+    font-size: 13.5px;
+    color: var(--gray-700);
+    line-height: 1.95;
+    margin-bottom: 14px;
+  }
+  .new-block .info-row dt {
+    color: var(--navy);
+    font-weight: 700;
+  }
+  .new-block .line-link {
+    display: inline-block;
+    margin-top: 6px;
+    color: var(--line);
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  /* 手機版微縮 */
+  .phone-screen .new-block { padding: 22px 18px 24px; }
+  .phone-screen .new-block .h-orange-bar { font-size: 15px; }
+  .phone-screen .new-block .heading-plain { font-size: 15px; }
+  .phone-screen .new-block .lead,
+  .phone-screen .new-block p,
+  .phone-screen .new-block .line-link { font-size: 13px; }
+  .phone-screen .new-block .info-row { font-size: 12.5px; grid-template-columns: 75px 1fr; }
+
+  /* 商品卡列表(我要買車) */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    padding: 16px 22px 28px;
+  }
+  .product-card {
+    border-radius: 8px;
+    background: white;
+    border: 1px solid var(--gray-100);
+    overflow: hidden;
+  }
+  .product-card .img {
+    width: 100%; aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #E2E8F0 0%, #CBD5E1 100%);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gray-500); font-size: 17px;
+  }
+  .product-card .info {
+    padding: 9px 11px;
+    font-size: 11.5px;
+  }
+  .product-card .name { font-weight: 700; color: var(--navy); }
+  .product-card .price { color: var(--orange-deep); font-weight: 700; margin-top: 3px; }
+  .product-card .specs { color: var(--gray-500); margin-top: 3px; font-size: 11px; }
+  .phone-screen .product-grid {
+    grid-template-columns: 1fr;
+    padding: 8px 14px 18px;
+    gap: 12px;
+  }
+
+  /* 我要賣車的主圖 / 公平交易段落 */
+  .sell-hero {
+    margin: 12px 22px 22px;
+  }
+  .sell-hero .placeholder {
+    width: 100%;
+    border-radius: 6px;
+    aspect-ratio: 3/1;
+    background: linear-gradient(135deg, #94A3B8, #64748B);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 13px;
+  }
+  .phone-screen .sell-hero { margin: 8px 14px 16px; }
+  .phone-screen .sell-hero .placeholder { font-size: 11px; }
+
+  .sell-fairness {
+    padding: 12px 22px 24px;
+  }
+  .sell-fairness h3 {
+    font-size: 18px; font-weight: 700;
+    color: var(--navy);
+    border-bottom: 3px solid var(--orange);
+    padding-bottom: 7px;
+    display: inline-block;
+    margin-bottom: 14px;
+  }
+  .sell-fairness h3 .em { color: var(--orange); }
+  .sell-fairness p {
+    font-size: 13px;
+    color: var(--gray-700);
+    line-height: 1.85;
+    margin-bottom: 8px;
+  }
+  .phone-screen .sell-fairness { padding: 8px 14px 18px; }
+  .phone-screen .sell-fairness h3 { font-size: 14.5px; }
+  .phone-screen .sell-fairness p { font-size: 12px; }
+
+  /* 收購流程 */
+  .process-section {
+    background: var(--orange);
+    padding: 30px 22px;
+  }
+  .process-section .header {
+    text-align: center;
+    color: white;
+    font-size: 19px; font-weight: 900;
+    margin-bottom: 20px;
+  }
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+  .process-card {
+    background: white;
+    border-radius: 7px;
+    padding: 13px 9px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--gray-700);
+  }
+  .process-card .step-num {
+    color: var(--orange-deep);
+    font-weight: 900;
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+  .process-card .step-title {
+    font-weight: 700; color: var(--navy); font-size: 11.5px; margin-bottom: 3px;
+  }
+  .phone-screen .process-steps {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+  .phone-screen .process-section { padding: 20px 14px; }
+  .phone-screen .process-section .header { font-size: 15px; }
+
+  /* 標註卡片(放在 wireframe 下方) */
+  .anno-card {
+    background: white;
+    border-radius: 10px;
+    padding: 18px 22px;
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid var(--orange);
+    margin-top: 24px;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+  .anno-card .tag-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .anno-card .tag-title .num-tag {
+    background: var(--orange);
+    color: white;
+    width: 22px; height: 22px;
+    border-radius: 5px;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 15px; font-weight: 700;
+  }
+  .anno-card .body {
+    color: var(--gray-700);
+  }
+  .anno-card .body strong {
+    color: var(--orange-deep);
+    font-weight: 700;
+  }
+  .anno-card dl {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 6px 14px;
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .anno-card dt {
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  /* 圖例 */
+  .legend {
+    background: white;
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    display: flex; gap: 28px; align-items: center; flex-wrap: wrap;
+    font-size: 12.5px;
+    border: 1px solid var(--gray-200);
+  }
+  .legend .item { display: flex; align-items: center; gap: 8px; }
+  .legend .box-demo {
+    width: 26px; height: 18px;
+    outline: 2px dashed rgba(245,166,35,0.6);
+    outline-offset: -2px;
+    background: #FFFfff;
+    border-radius: 3px;
+  }
+  .legend .tag-demo {
+    background: var(--orange);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.1em;
+    font-family: 'DM Mono', monospace;
+  }
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- 文件標題 -->
+  <div class="doc-header">
+    <div class="badge">映</div>
+    <div>
+      <h1>映象車業 — 買賣車頁面 Wireframe(定稿)</h1>
+      <div class="sub">A. 我要買車 ／ 副標說明式　　B. 我要賣車 ／ 段落式</div>
+    </div>
+    <div class="meta">
+      WIREFRAME FINAL<br>
+      2026.05.26
+    </div>
+  </div>
+
+  <!-- 圖例 -->
+  <div class="legend">
+    <div class="item"><div class="box-demo"></div> <span style="font-weight:600;">新增區塊位置</span>(橘色虛線框)</div>
+    <div class="item"><div class="tag-demo">NEW</div> <span>標示新增區域(僅 wireframe 顯示)</span></div>
+    <div class="item" style="color: var(--gray-500);">※ 灰色佔位元素 = 原版面保留不變</div>
+  </div>
+
+  <!-- ══════════ A. 我要買車 ══════════ -->
+  <div class="section-title">
+    <div class="num">A</div>
+    <h2>我要買車 ／ /buy-moto/</h2>
+    <div class="tag">標題下方、車輛列表上方</div>
+  </div>
+
+  <div class="layout-grid">
+    <!-- 桌機 -->
+    <div>
+      <div class="browser-frame">
+        <div class="browser-bar">
+          <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+          <div class="url">2ndhandmoto.com/buy-moto/</div>
+        </div>
+
+        <div class="nav-bar">
+          <div class="nav-logo"><div class="ic">映</div><div class="nm">映象車業</div></div>
+          <div class="nav-menu"><span>我要買車</span><span>我要賣車</span><span>部落格</span><span>聯絡我們</span></div>
+        </div>
+
+        <div class="page-title-row">
+          <div class="dot-icon"><span></span><span></span></div>
+          <h2>我要買車</h2>
+        </div>
+
+        <!-- ◉ 新增區塊 -->
+        <div class="new-block">
+          <div class="new-tag">NEW</div>
+          <div class="h-orange-bar">沒看到心儀的愛車？</div>
+          <p class="lead">中古機車流動快，<strong>歡迎 LINE 我們尋車</strong>，也可預約來店或到府賞車。</p>
+          <dl class="info-row">
+            <dt>到府賞車</dt><dd>雙北地區可預約</dd>
+            <dt>來店賞車</dt><dd>購車享折 $1,500 元優惠</dd>
+            <dt>線上預約</dt><dd>LINE 告知時間與意向車款</dd>
+          </dl>
+          <a class="line-link">→ 加入 LINE 預約</a>
+        </div>
+
+        <!-- 車輛列表 -->
+        <div class="product-grid">
+          <div class="product-card"><div class="img">🛵</div><div class="info"><div class="name">雷霆 s150 ABS</div><div class="price">$45,800</div><div class="specs">2020 ／ 16,483km</div></div></div>
+          <div class="product-card"><div class="img">🛵</div><div class="info"><div class="name">勁戰四代</div><div class="price">$45,800</div><div class="specs">2015 ／ 8,040km</div></div></div>
+          <div class="product-card"><div class="img">🛵</div><div class="info"><div class="name">Bws r</div><div class="price">$45,800</div><div class="specs">2015 ／ 38,987km</div></div></div>
+          <div class="product-card"><div class="img">🛵</div><div class="info"><div class="name">AI-1</div><div class="price">$26,800</div><div class="specs">2019 ／ 13,805km</div></div></div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:8px; font-size:11.5px; color:var(--gray-500); font-family:'DM Mono',monospace;">▲ desktop</div>
+    </div>
+
+    <!-- 手機 -->
+    <div>
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="phone-notch"></div>
+          <div class="nav-bar">
+            <div class="nav-logo"><div class="ic">映</div><div class="nm">映象車業</div></div>
+            <div class="nav-burger">☰</div>
+          </div>
+
+          <div class="page-title-row">
+            <div class="dot-icon"><span></span><span></span></div>
+            <h2>我要買車</h2>
+          </div>
+
+          <!-- 新增區塊(手機) -->
+          <div class="new-block">
+            <div class="new-tag">NEW</div>
+            <div class="h-orange-bar">沒看到心儀的愛車？</div>
+            <p class="lead">中古機車流動快，<strong>歡迎 LINE 我們尋車</strong>，也可預約來店或到府賞車。</p>
+            <dl class="info-row">
+              <dt>到府賞車</dt><dd>雙北地區可預約</dd>
+              <dt>來店賞車</dt><dd>購車折 $1,500</dd>
+              <dt>線上預約</dt><dd>LINE 告知意向</dd>
+            </dl>
+            <a class="line-link">→ 加入 LINE 預約</a>
+          </div>
+
+          <div class="product-grid">
+            <div class="product-card"><div class="img">🛵</div><div class="info"><div class="name">雷霆 s150 ABS</div><div class="price">$45,800</div><div class="specs">2020 ／ 16,483km</div></div></div>
+            <div class="product-card"><div class="img">🛵</div><div class="info"><div class="name">勁戰四代</div><div class="price">$45,800</div><div class="specs">2015 ／ 8,040km</div></div></div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:8px; font-size:11.5px; color:var(--gray-500); font-family:'DM Mono',monospace;">▲ mobile</div>
+    </div>
+  </div>
+
+  <!-- 註解 A -->
+  <div class="anno-card">
+    <div class="tag-title"><span class="num-tag">A</span>「我要買車」新增區塊規格</div>
+    <div class="body">
+      <dl>
+        <dt>插入位置</dt><dd>頁面 H1「我要買車」標題下方、車輛卡片 grid 上方</dd>
+        <dt>區塊類型</dt><dd>單欄文字區塊(無圖、無 icon、無按鈕)</dd>
+        <dt>排版</dt><dd>副標(橘色短線)+ 1 行引言 + 3 行定義列(dt/dd)+ LINE 文字超連結</dd>
+        <dt>LINE 連結</dt><dd>導向官網現有的 LINE 客服連結(與右下角浮動 LINE 按鈕同個 URL)</dd>
+        <dt>標題</dt><dd><strong>沒看到心儀的愛車?</strong></dd>
+        <dt>引言</dt><dd>中古機車流動快,歡迎 LINE 我們尋車,也可預約來店或到府賞車。</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- ══════════ B. 我要賣車 ══════════ -->
+  <div class="section-title" style="margin-top: 52px;">
+    <div class="num">B</div>
+    <h2>我要賣車 ／ /sell/</h2>
+    <div class="tag">「公平交易」段落下方、「收購流程」上方</div>
+  </div>
+
+  <div class="layout-grid">
+    <!-- 桌機 -->
+    <div>
+      <div class="browser-frame">
+        <div class="browser-bar">
+          <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+          <div class="url">2ndhandmoto.com/sell/</div>
+        </div>
+
+        <div class="nav-bar">
+          <div class="nav-logo"><div class="ic">映</div><div class="nm">映象車業</div></div>
+          <div class="nav-menu"><span>我要買車</span><span>我要賣車</span><span>部落格</span><span>聯絡我們</span></div>
+        </div>
+
+        <div class="page-title-row">
+          <div class="dot-icon"><span></span><span></span></div>
+          <h2>我要賣車</h2>
+        </div>
+
+        <!-- 原本的主圖 -->
+        <div class="sell-hero">
+          <div class="placeholder">📷 機車排排站主圖(保留現有圖片)</div>
+        </div>
+
+        <!-- 原本的公平交易段落 -->
+        <div class="sell-fairness">
+          <h3>映象深知 <span class="em">公平交易與誠信</span>至關重要</h3>
+          <p>以誠信與透明為本,提供值得信賴的二手機車收購平台,讓您輕鬆、無壓力地出售您的愛車...(保留原文)</p>
+          <p>映象車業團隊將為您提供專業的二手機車行情評估...(保留原文)</p>
+        </div>
+
+        <!-- ◉ 新增區塊 -->
+        <div class="new-block">
+          <div class="new-tag">NEW</div>
+          <div class="heading-plain">沒時間出門？我們提供到府估車</div>
+          <p>專員到府實車鑑價，現場議價、即時付款、過戶代辦一條龍。</p>
+          <p>不論機車的品牌、型號或狀態如何，<strong>LINE 我們即可預約到府估車</strong>。</p>
+          <a class="line-link">→ 加入 LINE 預約到府估車</a>
+        </div>
+
+        <!-- 原本的收購流程 -->
+        <div class="process-section">
+          <div class="header">收購流程</div>
+          <div class="process-steps">
+            <div class="process-card"><div class="step-num">01</div><div class="step-title">線上諮詢</div></div>
+            <div class="process-card"><div class="step-num">02</div><div class="step-title">約定交易</div></div>
+            <div class="process-card"><div class="step-num">03</div><div class="step-title">備妥資料</div></div>
+            <div class="process-card"><div class="step-num">04</div><div class="step-title">現場交易</div></div>
+            <div class="process-card"><div class="step-num">05</div><div class="step-title">過戶流程</div></div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:8px; font-size:11.5px; color:var(--gray-500); font-family:'DM Mono',monospace;">▲ desktop</div>
+    </div>
+
+    <!-- 手機 -->
+    <div>
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="phone-notch"></div>
+          <div class="nav-bar">
+            <div class="nav-logo"><div class="ic">映</div><div class="nm">映象車業</div></div>
+            <div class="nav-burger">☰</div>
+          </div>
+
+          <div class="page-title-row">
+            <div class="dot-icon"><span></span><span></span></div>
+            <h2>我要賣車</h2>
+          </div>
+
+          <div class="sell-hero">
+            <div class="placeholder">📷 主圖(保留)</div>
+          </div>
+
+          <div class="sell-fairness">
+            <h3>公平交易與<span class="em">誠信</span>至關重要</h3>
+            <p>以誠信與透明為本，提供值得信賴的二手機車收購平台...(保留原文)</p>
+          </div>
+
+          <!-- 新增區塊(手機) -->
+          <div class="new-block">
+            <div class="new-tag">NEW</div>
+            <div class="heading-plain">沒時間出門?到府估車</div>
+            <p>專員到府實車鑑價，現場議價、即時付款、過戶代辦一條龍。</p>
+            <p>不論機車的品牌、型號或狀態如何，<strong>LINE 我們即可預約到府估車</strong>。</p>
+            <a class="line-link">→ 加入 LINE 預約到府估車</a>
+          </div>
+
+          <div class="process-section">
+            <div class="header">收購流程</div>
+            <div class="process-steps">
+              <div class="process-card"><div class="step-num">01</div><div class="step-title">線上諮詢</div></div>
+              <div class="process-card"><div class="step-num">02</div><div class="step-title">約定交易</div></div>
+              <div class="process-card"><div class="step-num">03</div><div class="step-title">備妥資料</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:8px; font-size:11.5px; color:var(--gray-500); font-family:'DM Mono',monospace;">▲ mobile</div>
+    </div>
+  </div>
+
+  <!-- 註解 B -->
+  <div class="anno-card">
+    <div class="tag-title"><span class="num-tag">B</span>「我要賣車」新增區塊規格</div>
+    <div class="body">
+      <dl>
+        <dt>插入位置</dt><dd>「映象深知公平交易與誠信至關重要」段落下方、橘色「收購流程」區塊上方</dd>
+        <dt>區塊類型</dt><dd>單欄文字區塊(無圖、無 icon、無按鈕)</dd>
+        <dt>排版</dt><dd>粗體標題 + 2 段敘述 + LINE 文字超連結</dd>
+        <dt>LINE 連結</dt><dd>導向官網現有的 LINE 客服連結</dd>
+        <dt>標題</dt><dd><strong>沒時間出門?我們提供到府估車</strong></dd>
+        <dt>段落 1</dt><dd>專員到府實車鑑價,現場議價、即時付款、過戶代辦一條龍。</dd>
+        <dt>段落 2</dt><dd>不論機車的品牌、型號或狀態如何,LINE 我們即可預約到府估車。</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- 結語 -->
+  <div style="background: var(--navy); color: white; border-radius: 12px; padding: 24px 30px; margin-top: 36px;">
+    <div style="font-size: 15px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+      <div style="width: 4px; height: 16px; background: var(--orange); border-radius: 2px;"></div>
+      備註說明
+    </div>
+    <div style="font-size: 15px; color: rgba(255,255,255,0.8); line-height: 1.85;">
+      • 兩個新區塊都以<strong style="color:var(--orange);">純文字 + LINE 文字超連結</strong>呈現,與現有官網風格一致(無按鈕、無 icon、無漸層底色)。<br>
+      • wireframe 中的橘色虛線框與 NEW 標籤<strong style="color:var(--orange);">僅為標示用途</strong>,實際上線時移除。<br>
+      • LINE 文字連結建議套用官網現有 LINE URL,不需另外開設新的客服管道。<br>
+      • 兩個區塊的文字大小、行距、副標樣式皆沿用原官網的段落設定,Elementor 內可直接複用既有文字 widget 樣式。
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
