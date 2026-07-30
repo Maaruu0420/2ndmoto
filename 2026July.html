@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>映象車業 SEO 月報 2026年6月29日—7月28日</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2540;
+    --navy-light: #243054;
+    --orange: #F5A623;
+    --orange-light: #F7B84B;
+    --orange-pale: #FEF3DC;
+    --green: #27ae60;
+    --red: #e74c3c;
+    --white: #ffffff;
+    --gray-50: #f8f9fa;
+    --gray-100: #f0f1f3;
+    --gray-200: #e2e4e9;
+    --gray-500: #8890a4;
+    --gray-700: #4a5068;
+    --text: #1e2235;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: var(--gray-50);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── PAGE WRAPPER ── */
+  .page {
+    width: 1000px;
+    margin: 0 auto;
+    background: white;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    background: var(--navy);
+    padding: 56px 60px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    right: -80px; top: -80px;
+    width: 380px; height: 380px;
+    border-radius: 50%;
+    background: rgba(245,166,35,0.08);
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    right: 60px; bottom: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(245,166,35,0.05);
+  }
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 48px;
+  }
+  .logo-badge { display: flex; align-items: center; gap: 12px; }
+  .logo-icon {
+    width: 44px; height: 44px;
+    background: var(--orange);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; font-weight: 900; color: white;
+  }
+  .logo-text { color: white; }
+  .logo-text .name { font-size: 18px; font-weight: 700; letter-spacing: 0.02em; }
+  .logo-text .url { font-size: 12px; color: var(--gray-500); letter-spacing: 0.05em; margin-top: 1px; }
+  .cover-label {
+    text-align: right;
+    color: var(--gray-500);
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .cover-title { color: white; }
+  .cover-title h1 {
+    font-size: 40px; font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+  .cover-title h1 span { color: var(--orange); }
+  .cover-title .sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 10px;
+    letter-spacing: 0.02em;
+  }
+  .cover-period {
+    margin-top: 32px;
+    display: inline-block;
+    padding: 7px 18px;
+    border: 1px solid rgba(245,166,35,0.35);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--orange-light);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.06em;
+  }
+
+  /* ── SECTION WRAPPER ── */
+  .section {
+    padding: 40px 60px;
+    border-bottom: 1px solid var(--gray-100);
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .section-num {
+    width: 28px; height: 28px;
+    background: var(--orange);
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; color: white;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-size: 17px; font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+  }
+  .section-period {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--gray-500);
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* ── KPI CARDS ── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .kpi-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .kpi-card {
+    background: var(--gray-50);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid var(--gray-100);
+    position: relative;
+    overflow: hidden;
+  }
+  .kpi-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gray-200);
+  }
+  .kpi-card.highlight::after { background: var(--orange); }
+  .kpi-card.positive::after { background: var(--green); }
+  .kpi-card.negative::after { background: var(--red); }
+  .kpi-card.feature {
+    background: var(--navy);
+    border: none;
+  }
+  .kpi-card.feature .kpi-label { color: rgba(255,255,255,0.55); }
+  .kpi-card.feature .kpi-value { color: white; }
+  .kpi-card.feature .kpi-value .unit { color: rgba(255,255,255,0.55); }
+  .kpi-card.feature .kpi-prev { color: rgba(255,255,255,0.5); }
+  .kpi-card.feature::after { background: var(--orange); }
+
+  .kpi-label {
+    font-size: 12px; color: var(--gray-500);
+    font-weight: 500; letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+  .kpi-value {
+    font-size: 30px; font-weight: 900;
+    color: var(--navy);
+    line-height: 1;
+    font-family: 'DM Mono', monospace;
+  }
+  .kpi-value .unit { font-size: 14px; font-weight: 500; color: var(--gray-500); margin-left: 3px; }
+  .kpi-delta {
+    margin-top: 8px;
+    font-size: 12px; font-weight: 600;
+    font-family: 'DM Mono', monospace;
+  }
+  .kpi-delta.up { color: var(--green); }
+  .kpi-delta.down { color: var(--red); }
+  .kpi-delta.flat { color: var(--gray-500); }
+  .kpi-delta.new { color: var(--orange); }
+  .kpi-prev {
+    font-size: 12px; color: var(--gray-500);
+    margin-top: 2px;
+  }
+
+  /* ── NOTE BOX ── */
+  .note-box {
+    background: #EBF4FF;
+    border-left: 3px solid #3B82F6;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    margin-top: 16px;
+    font-size: 12px;
+    color: #1E40AF;
+    line-height: 1.7;
+  }
+
+  /* ── TABLE ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .data-table thead th {
+    background: var(--navy);
+    color: rgba(255,255,255,0.85);
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .data-table thead th:first-child { border-radius: 8px 0 0 0; }
+  .data-table thead th:last-child { border-radius: 0 8px 0 0; }
+  .data-table tbody tr { border-bottom: 1px solid var(--gray-100); }
+  .data-table tbody tr:hover { background: var(--gray-50); }
+  .data-table tbody tr:last-child { border-bottom: none; }
+  .data-table tbody td { padding: 10px 14px; color: var(--text); font-size: 12.5px; }
+  .data-table tbody td:first-child { font-weight: 500; }
+  .data-table .rank {
+    width: 28px; height: 28px;
+    background: var(--navy);
+    color: white;
+    border-radius: 6px;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700;
+  }
+  .data-table .rank.top3 { background: var(--orange); }
+
+  .tag-up { color: var(--green); font-weight: 600; font-family: 'DM Mono', monospace; font-size: 12px; }
+  .tag-down { color: var(--red); font-weight: 600; font-family: 'DM Mono', monospace; font-size: 12px; }
+  .tag-flat { color: var(--gray-500); font-size: 12px; }
+
+  /* ── CHANNEL TABLE ── */
+  .channel-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--gray-100);
+  }
+  .channel-row:last-child { border-bottom: none; }
+  .channel-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .channel-name { flex: 1; font-size: 12.5px; font-weight: 500; }
+  .channel-sessions {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px; font-weight: 700; color: var(--navy);
+    width: 70px; text-align: right;
+  }
+  .channel-bar-wrap {
+    width: 120px; height: 6px;
+    background: var(--gray-100);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .channel-bar { height: 100%; border-radius: 3px; background: var(--orange); }
+  .channel-engage {
+    width: 55px; text-align: right;
+    font-size: 12px; color: var(--gray-700);
+    font-family: 'DM Mono', monospace;
+  }
+  .channel-delta {
+    width: 75px; text-align: right; font-size: 12px;
+    font-family: 'DM Mono', monospace; font-weight: 600;
+  }
+
+  /* ── INQUIRY GRID ── */
+  .inquiry-stats {
+    display: flex; gap: 16px; margin-bottom: 28px;
+  }
+  .inq-card {
+    background: var(--navy);
+    color: white;
+    border-radius: 12px;
+    padding: 20px 24px;
+    flex: 1;
+  }
+  .inq-card .lbl { font-size: 12px; color: rgba(255,255,255,0.55); margin-bottom: 6px; }
+  .inq-card .val { font-size: 30px; font-weight: 900; font-family: 'DM Mono', monospace; }
+  .inq-card .val .unit { font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.6); }
+  .inq-card .delta { margin-top: 6px; font-size: 12px; font-weight: 600; font-family: 'DM Mono', monospace; }
+  .inq-card .delta.up { color: #6EE7B7; }
+  .inq-card .delta.down { color: #FCA5A5; }
+  .inq-card .delta.flat { color: rgba(255,255,255,0.55); }
+  .inq-card.orange { background: var(--orange); }
+  .inq-card.orange .lbl { color: rgba(0,0,0,0.5); }
+  .inq-card.orange .val { color: var(--navy); }
+  .inq-card.orange .unit { color: rgba(0,0,0,0.45); }
+
+  .moto-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .moto-card {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-100);
+    border-radius: 10px;
+    padding: 12px 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .moto-rank {
+    width: 24px; height: 24px; border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; color: white;
+    flex-shrink: 0;
+    background: var(--navy);
+  }
+  .moto-rank.gold { background: #D97706; }
+  .moto-rank.silver { background: #6B7280; }
+  .moto-rank.bronze { background: #92400E; }
+  .moto-name { font-size: 12px; font-weight: 500; flex: 1; }
+  .moto-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px; font-weight: 700; color: var(--orange);
+  }
+
+  /* ── CONCLUSION ── */
+  .conclusion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .conc-card { border-radius: 12px; padding: 18px 20px; }
+  .conc-card.warn {
+    background: #FFF7ED;
+    border: 1px solid #FED7AA;
+  }
+  .conc-card.good {
+    background: #F0FDF4;
+    border: 1px solid #BBF7D0;
+  }
+  .conc-card.action {
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+  }
+  .conc-icon { font-size: 18px; margin-bottom: 8px; }
+  .conc-title { font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+  .conc-card.warn .conc-title { color: #9A3412; }
+  .conc-card.good .conc-title { color: #166534; }
+  .conc-card.action .conc-title { color: #1E40AF; }
+  .conc-body { font-size: 12.5px; color: var(--gray-700); line-height: 1.75; }
+
+  .action-list {
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .action-item {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-100);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .action-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .action-title { font-size: 12.5px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .action-body { font-size: 12.5px; color: var(--gray-700); line-height: 1.7; }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--navy);
+    padding: 24px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-left { color: rgba(255,255,255,0.45); font-size: 12px; line-height: 1.8; }
+  .footer-right {
+    color: rgba(255,255,255,0.35);
+    font-size: 12px;
+    font-family: 'DM Mono', monospace;
+    text-align: right;
+  }
+
+  /* BADGE */
+  .new-badge {
+    display: inline-block;
+    padding: 1px 7px;
+    background: var(--orange-pale);
+    color: #B45309;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  /* INSIGHT STRIP */
+  .insight-strip {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    border-radius: 12px;
+    padding: 18px 22px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .insight-strip .icon { font-size: 22px; flex-shrink: 0; }
+  .insight-strip .text { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.85); }
+  .insight-strip .text strong { color: var(--orange); }
+
+  /* COMPARE LABEL */
+  .compare-label {
+    font-size: 12px; color: var(--gray-500);
+    margin-bottom: 16px;
+    padding: 7px 12px;
+    background: var(--gray-50);
+    border-radius: 6px;
+    display: inline-flex; gap: 6px; align-items: center;
+  }
+  .compare-label span { font-family: 'DM Mono', monospace; font-weight: 600; }
+
+  /* SUB DIVIDER */
+  .sub-divider {
+    margin: 28px 0 20px;
+    text-align: center;
+    position: relative;
+  }
+  .sub-divider::before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; top: 50%;
+    height: 1px;
+    background: var(--gray-200);
+  }
+  .sub-divider span {
+    position: relative;
+    background: white;
+    padding: 0 16px;
+    font-size: 12px;
+    color: var(--gray-500);
+    letter-spacing: 0.18em;
+    font-weight: 600;
+  }
+
+  /* SERP TABLE */
+  .serp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .serp-table thead th {
+    background: var(--navy);
+    color: rgba(255,255,255,0.85);
+    padding: 9px 12px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .serp-table tbody tr { border-bottom: 1px solid var(--gray-100); }
+  .serp-table tbody td { padding: 9px 12px; color: var(--text); font-size: 12.5px; }
+  .serp-table .grp-row td {
+    background: var(--orange-pale);
+    color: #92400E;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    padding: 7px 12px;
+  }
+  .serp-pos {
+    font-family: 'DM Mono', monospace;
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 12.5px;
+  }
+  .serp-pos.weak { color: var(--gray-500); font-weight: 500; }
+  .serp-ai-yes {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #D1FAE5;
+    color: #065F46;
+    border-radius: 4px;
+    font-family: 'DM Mono', monospace;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .serp-ai-no {
+    color: var(--gray-500);
+    font-family: 'DM Mono', monospace;
+    font-size: 12.5px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-top">
+      <div class="logo-badge">
+        <div class="logo-icon">映</div>
+        <div class="logo-text">
+          <div class="name">映象車業</div>
+          <div class="url">2NDHANDMOTO.COM</div>
+        </div>
+      </div>
+      <div class="cover-label">
+        MONTHLY SEO REPORT<br>
+        Google Analytics 4 ＋ Google Search Console<br>
+        數據整合分析
+      </div>
+    </div>
+    <div class="cover-title">
+      <h1>本月 <span>SEO</span> 數據報表</h1>
+      <div class="sub">▲ 對比期間：2026/5/29 — 6/28</div>
+    </div>
+    <div class="cover-period">2026 年 6 月 29 日 — 7 月 28 日</div>
+  </div>
+
+  <!-- SECTION 1 核心數據總覽 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">一</div>
+      <div class="section-title">本期核心數據總覽</div>
+      <div class="section-period">6/29 — 7/28（共 31 天）</div>
+    </div>
+
+    <div class="compare-label">▲ 對比上期：<span>2026/5/29 — 6/28（31天）</span></div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card positive">
+        <div class="kpi-label">活躍使用者</div>
+        <div class="kpi-value">6,292<span class="unit">人</span></div>
+        <div class="kpi-delta up">↑ 9.0% 較上期 5,773</div>
+      </div>
+      <div class="kpi-card positive">
+        <div class="kpi-label">新使用者</div>
+        <div class="kpi-value">5,859<span class="unit">人</span></div>
+        <div class="kpi-delta up">↑ 9.3% 較上期 5,362</div>
+      </div>
+      <div class="kpi-card positive">
+        <div class="kpi-label">總工作階段</div>
+        <div class="kpi-value">6,879<span class="unit">次</span></div>
+        <div class="kpi-delta up">↑ 8.6% 較上期 6,335</div>
+      </div>
+    </div>
+    <div class="kpi-grid-2">
+      <div class="kpi-card feature">
+        <div class="kpi-label">AI 助理管道流量</div>
+        <div class="kpi-value">26<span class="unit">次</span></div>
+        <div class="kpi-delta new">↑ 333% 較上期 6 次</div>
+        <div class="kpi-prev">ChatGPT／Gemini／Perplexity 引用大幅增加</div>
+      </div>
+      <div class="kpi-card positive">
+        <div class="kpi-label">「映象車業」品牌字 點擊率</div>
+        <div class="kpi-value">20.37<span class="unit">%</span></div>
+        <div class="kpi-delta up">品牌字平均排名 1.06</div>
+      </div>
+      <div class="kpi-card positive">
+        <div class="kpi-label">總瀏覽量</div>
+        <div class="kpi-value">8,394<span class="unit">次</span></div>
+        <div class="kpi-delta up">↑ 4.8% 較上期 8,013</div>
+      </div>
+    </div>
+
+    <div class="insight-strip">
+      <div class="icon">📊</div>
+      <div class="text">
+        本期<strong>三大核心指標同步大幅成長</strong>──活躍使用者 +9.0%、新使用者 +9.3%、總工作階段 +8.6%，總瀏覽量也回升 +4.8%。
+        最大亮點：<strong>AI 助理管道流量從 6 次躍升至 26 次（+333%）</strong>，代表 ChatGPT、Gemini、Perplexity 引用映象車業內容明顯增加；
+        此外品牌字「映象車業」點閱率突破 <strong>20.37%</strong> 高水位。
+        <strong>本月 7/10 新發布的「2026 150cc 機車推薦」文章</strong>更直接推動該關鍵字重回 Google AI 摘要第 1 名，SEO 執行成果具體浮現。
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2 流量來源管道分析 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">二</div>
+      <div class="section-title">流量來源管道分析</div>
+      <div class="section-period">工作階段數（Sessions）</div>
+    </div>
+
+    <div style="display:flex; gap:20px; margin-bottom:16px;">
+      <div style="flex:1; background:var(--gray-50); border-radius:10px; padding:16px 18px; border:1px solid var(--gray-100);">
+        <div style="font-size:12px;color:var(--gray-500);margin-bottom:4px;letter-spacing:0.05em;">總工作階段</div>
+        <div style="font-size:24px;font-weight:900;color:var(--navy);font-family:'DM Mono',monospace;">6,879</div>
+        <div style="font-size:12px;color:var(--green);font-weight:600;margin-top:4px;">↑ 8.6% 較上期 6,335</div>
+      </div>
+      <div style="flex:1; background:var(--gray-50); border-radius:10px; padding:16px 18px; border:1px solid var(--gray-100);">
+        <div style="font-size:12px;color:var(--gray-500);margin-bottom:4px;letter-spacing:0.05em;">整體參與度</div>
+        <div style="font-size:24px;font-weight:900;color:var(--navy);font-family:'DM Mono',monospace;">50.02%</div>
+        <div style="font-size:12px;color:var(--green);font-weight:600;margin-top:4px;">↑ 3.1pp 較上期 46.87%</div>
+      </div>
+      <div style="flex:1; background:var(--gray-50); border-radius:10px; padding:16px 18px; border:1px solid var(--gray-100);">
+        <div style="font-size:12px;color:var(--gray-500);margin-bottom:4px;letter-spacing:0.05em;">事件總計數</div>
+        <div style="font-size:24px;font-weight:900;color:var(--navy);font-family:'DM Mono',monospace;">36,334</div>
+        <div style="font-size:12px;color:var(--green);font-weight:600;margin-top:4px;">↑ 5.2% 較上期 34,540</div>
+      </div>
+    </div>
+
+    <!-- 各管道 -->
+    <div style="background:var(--gray-50); border-radius:10px; padding:8px 16px; border:1px solid var(--gray-100);">
+      <div style="display:flex; gap:12px; padding:8px 0; border-bottom:2px solid var(--gray-200); margin-bottom:4px;">
+        <div style="flex:0 0 10px;"></div>
+        <div style="flex:1; font-size:12px; font-weight:600; color:var(--gray-500); letter-spacing:0.06em;">管道</div>
+        <div style="width:70px; text-align:right; font-size:12px; font-weight:600; color:var(--gray-500);">工作階段</div>
+        <div style="width:120px; font-size:12px; font-weight:600; color:var(--gray-500); padding-left:8px;">佔比</div>
+        <div style="width:55px; text-align:right; font-size:12px; font-weight:600; color:var(--gray-500);">參與度</div>
+        <div style="width:75px; text-align:right; font-size:12px; font-weight:600; color:var(--gray-500);">與上期</div>
+      </div>
+
+      <div class="channel-row">
+        <div class="channel-dot" style="background:#94A3B8;"></div>
+        <div class="channel-name">Direct（直接流量） <span class="new-badge" style="background:#FEE2E2; color:#991B1B;">含異常</span></div>
+        <div class="channel-sessions">2,591</div>
+        <div class="channel-bar-wrap"><div class="channel-bar" style="width:100%; background:#94A3B8;"></div></div>
+        <div class="channel-engage">9.7%</div>
+        <div class="channel-delta tag-up">↑ 30.7%</div>
+      </div>
+      <div class="channel-row">
+        <div class="channel-dot" style="background:#3B82F6;"></div>
+        <div class="channel-name">Paid Search（付費搜尋）</div>
+        <div class="channel-sessions">2,338</div>
+        <div class="channel-bar-wrap"><div class="channel-bar" style="width:90%; background:#3B82F6;"></div></div>
+        <div class="channel-engage">63.8%</div>
+        <div class="channel-delta tag-down">↓ 2.4%</div>
+      </div>
+      <div class="channel-row">
+        <div class="channel-dot" style="background:var(--orange);"></div>
+        <div class="channel-name">Organic Search（自然搜尋）</div>
+        <div class="channel-sessions">1,492</div>
+        <div class="channel-bar-wrap"><div class="channel-bar" style="width:57.6%; background:var(--orange);"></div></div>
+        <div class="channel-engage">67.2%</div>
+        <div class="channel-delta tag-up">↑ 9.0%</div>
+      </div>
+      <div class="channel-row">
+        <div class="channel-dot" style="background:#F59E0B;"></div>
+        <div class="channel-name">Unassigned <span class="new-badge" style="background:#FEE2E2; color:#991B1B;">含異常</span></div>
+        <div class="channel-sessions">392</div>
+        <div class="channel-bar-wrap"><div class="channel-bar" style="width:15.1%; background:#F59E0B;"></div></div>
+        <div class="channel-engage">0.5%</div>
+        <div class="channel-delta tag-down">↓ 27.7%</div>
+      </div>
+      <div class="channel-row">
+        <div class="channel-dot" style="background:#EC4899;"></div>
+        <div class="channel-name">AI Assistant（AI 助理） <span class="new-badge">爆發成長</span></div>
+        <div class="channel-sessions">26</div>
+        <div class="channel-bar-wrap"><div class="channel-bar" style="width:1.0%; background:#EC4899;"></div></div>
+        <div class="channel-engage">50.0%</div>
+        <div class="channel-delta tag-up">↑ 333%</div>
+      </div>
+      <div class="channel-row">
+        <div class="channel-dot" style="background:#8B5CF6;"></div>
+        <div class="channel-name">Cross-network（跨網路）</div>
+        <div class="channel-sessions">29</div>
+        <div class="channel-bar-wrap"><div class="channel-bar" style="width:1.1%; background:#8B5CF6;"></div></div>
+        <div class="channel-engage">86.2%</div>
+        <div class="channel-delta tag-up">↑ 38.1%</div>
+      </div>
+      <div class="channel-row">
+        <div class="channel-dot" style="background:#10B981;"></div>
+        <div class="channel-name">Organic Social（社群）</div>
+        <div class="channel-sessions">11</div>
+        <div class="channel-bar-wrap"><div class="channel-bar" style="width:0.4%; background:#10B981;"></div></div>
+        <div class="channel-engage">72.7%</div>
+        <div class="channel-delta tag-down">↓ 45.0%</div>
+      </div>
+      <div class="channel-row">
+        <div class="channel-dot" style="background:#64748B;"></div>
+        <div class="channel-name">Referral（外部導流）</div>
+        <div class="channel-sessions">3</div>
+        <div class="channel-bar-wrap"><div class="channel-bar" style="width:0.1%; background:#64748B;"></div></div>
+        <div class="channel-engage">100%</div>
+        <div class="channel-delta tag-up">↑ 200%</div>
+      </div>
+    </div>
+
+    <div class="note-box" style="background:#FEF2F2; border-color:#DC2626; color:#7F1D1D; margin-top:16px;">
+      ⚠️ <strong>本期數據解讀提醒：偵測到約 2,000 次來自中國的異常流量</strong><br>
+      本期 Direct 與 Unassigned 兩個管道中，偵測到約 <strong>2,000 次來自中國的異常工作階段（以 Direct 佔多數）</strong>，此為 GA4 常見的 bot／爬蟲流量，屬正常網站可見度提升後的副作用。
+      這也解釋了為何 Direct 管道參與度僅 <strong>9.7%</strong>（一般品牌回訪流量應在 40% 以上）。
+      <br><br>
+      <strong>對報表數字的影響</strong>：實際有效流量可能略低於本期呈現數字，但不影響「自然搜尋 +9.0%、付費搜尋穩定、AI 助理暴增」等核心 SEO 表現指標的判讀。
+      <br><br>
+      <strong>提供資訊參考</strong>：<a href="https://techtarian.com/others/industries/ga4-singapore-fake-traffic/" style="color:#DC2626; text-decoration:underline; font-weight:600;" target="_blank">〈GA4 假流量現象解析〉（techtarian）</a>
+    </div>
+
+    <div class="note-box" style="background:#FFF7ED; border-color:#F5A623; color:#92400E;">
+      ⭐ <strong>本期管道亮點</strong>：<br>
+      ① <strong>「AI Assistant」爆發式成長（6 → 26 次，+333%）</strong>：ChatGPT、Perplexity、Gemini 引用映象車業內容的數量三個月內從無到 26 次，是<strong>本期最重要的 GEO（生成式搜尋優化）指標</strong>，代表映象內容正被 AI 搜尋工具視為權威來源。<br>
+      ② <strong>Organic Search（自然搜尋）回升 +9.0%</strong>：連續兩期正成長，SEO 內容累積效益持續發酵。<br>
+      ③ <strong>付費搜尋維持穩定</strong>（Paid Search ↓2.4%，微幅波動），廣告投放 ROI 大致持平。<br>
+      ④ <strong>Unassigned 未歸類流量下降 27.7%</strong>：上期偵測到的追蹤參數問題有所改善。
+    </div>
+  </div>
+
+  <!-- SECTION 3 熱門點擊頁面 Top 10 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">三</div>
+      <div class="section-title">本期熱門點擊頁面 Top 10</div>
+      <div class="section-period">Google Search Console 點擊數</div>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>頁面標題</th>
+          <th style="text-align:right;">點擊數</th>
+          <th style="text-align:right;">曝光數</th>
+          <th style="text-align:right;">點閱率</th>
+          <th style="text-align:right;">平均排名</th>
+          <th style="text-align:right;">與上期比較</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="rank top3">1</span></td>
+          <td>首頁<br><span style="font-size:12px;color:var(--gray-500);">2ndhandmoto.com/</span></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">228</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">8,011</td>
+          <td style="text-align:right;">2.85%</td>
+          <td style="text-align:right;">10.68</td>
+          <td style="text-align:right;"><span class="tag-down">↓ -20%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank top3">2</span></td>
+          <td>2025 150cc 機車推薦－這三款值得你試試<br><span style="font-size:12px;color:var(--gray-500);">/2025/04/16/...</span></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">225</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">6,693</td>
+          <td style="text-align:right;">3.36%</td>
+          <td style="text-align:right;">5.74</td>
+          <td style="text-align:right;"><span class="tag-up">↑ +14%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank top3">3</span></td>
+          <td>二手機車高價收購頁面<br><span style="font-size:12px;color:var(--gray-500);">/sell/</span></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">117</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">3,765</td>
+          <td style="text-align:right;">3.11%</td>
+          <td style="text-align:right;">8.04</td>
+          <td style="text-align:right;"><span class="tag-up">↑ +109% <span class="new-badge">大幅回升</span></span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">4</span></td>
+          <td>2025 機車怎麼挑？老闆嚴選三神車推薦<br><span style="font-size:12px;color:var(--gray-500);">/2025/06/23/...</span></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">106</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">1,103</td>
+          <td style="text-align:right;">9.61%</td>
+          <td style="text-align:right;">4.81</td>
+          <td style="text-align:right;"><span class="tag-up">↑ +4%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">5</span></td>
+          <td>2026 150cc 機車推薦：勁戰七代 XR、SYM Jet SL 158、KYMCO RTS R 165 <span class="new-badge">7/10 新發布</span><br><span style="font-size:12px;color:var(--gray-500);">/2026/07/10/2026-150cc-機車推薦.../</span></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">29</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">428</td>
+          <td style="text-align:right;">6.78%</td>
+          <td style="text-align:right;">5.25</td>
+          <td style="text-align:right;"><span class="tag-up">★ 新文入榜</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">6</span></td>
+          <td>勁戰三代完整介紹<br><span style="font-size:12px;color:var(--gray-500);">/2023/01/19/cygnusx_3/</span></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">24</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">5,004</td>
+          <td style="text-align:right;">0.48%</td>
+          <td style="text-align:right;">2.20</td>
+          <td style="text-align:right;"><span class="tag-down">↓ -4%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">7</span></td>
+          <td>狀況超多？淺談三款妥善率較低車款<br><span style="font-size:12px;color:var(--gray-500);">/2024/05/16/...</span></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">20</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">461</td>
+          <td style="text-align:right;">4.34%</td>
+          <td style="text-align:right;">8.44</td>
+          <td style="text-align:right;"><span class="tag-up">↑ +43%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">8</span></td>
+          <td>三陽 MMBCU 158 介紹<br><span style="font-size:12px;color:var(--gray-500);">/2022/10/24/mmbcu-158/</span></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">17</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">4,588</td>
+          <td style="text-align:right;">0.37%</td>
+          <td style="text-align:right;">1.74</td>
+          <td style="text-align:right;"><span class="tag-up">↑ +6%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">8</span></td>
+          <td>二手機車購買全攻略｜分期、買賣流程與保固一次<br><span style="font-size:12px;color:var(--gray-500);">/2025/08/20/...</span></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">17</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">699</td>
+          <td style="text-align:right;">2.43%</td>
+          <td style="text-align:right;">8.29</td>
+          <td style="text-align:right;"><span class="tag-up">★ 新進榜</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">8</span></td>
+          <td>WoWoW 100 老車翻新全紀錄<br><span style="font-size:12px;color:var(--gray-500);">/2025/11/24/wowow-100...</span></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">17</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">489</td>
+          <td style="text-align:right;">3.48%</td>
+          <td style="text-align:right;">6.60</td>
+          <td style="text-align:right;"><span class="tag-up">↑ +6%</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note-box" style="background:#FFF7ED; border-color:#F5A623; color:#92400E;">
+      ⚡ <strong>本期亮點</strong>：<br>
+      ① <strong>收購頁 /sell/ 點擊數翻倍成長（56 → 117，+109%）</strong>──這是本期最大幅回升的頁面，代表想賣車、換車的用戶明顯增加。<br>
+      ② <strong>7/10 新發布的「2026 150cc 機車推薦」文章首月即入榜第 5 名</strong>（29 次點擊、平均排名 5.25），SEO 起步表現優於預期。<br>
+      ③ <strong>「妥善率較低車款分析」大幅成長 +43%</strong>，深度比較類內容需求穩定上升。<br>
+      ④ <strong>「二手機車購買全攻略」新進榜 Top 10</strong>，反映流程指南類內容持續發揮長尾效益。
+    </div>
+
+    <!-- 本期新發布文章成效小區塊 -->
+    <div style="margin-top:24px; background:linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); border-radius:12px; padding:20px 22px; border:1px solid #F5A623;">
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+        <span style="font-size:16px;">✍️</span>
+        <div style="font-size:14px; font-weight:700; color:#92400E; letter-spacing:0.02em;">本期新發布內容成效追蹤</div>
+      </div>
+      <div style="font-size:12.5px; color:#78350F; line-height:1.75; margin-bottom:14px;">
+        本期完成 <strong>2 篇部落格新文發布</strong>，第一篇文章上線後即帶動品牌關鍵字排名大幅進步：
+      </div>
+      <table style="width:100%; border-collapse:collapse; font-size:12.5px; background:white; border-radius:8px; overflow:hidden;">
+        <thead>
+          <tr style="background:#FEF3C7;">
+            <th style="text-align:left; padding:10px 12px; font-size:12px; font-weight:600; color:#92400E;">發布日期</th>
+            <th style="text-align:left; padding:10px 12px; font-size:12px; font-weight:600; color:#92400E;">文章標題</th>
+            <th style="text-align:right; padding:10px 12px; font-size:12px; font-weight:600; color:#92400E;">首月點擊</th>
+            <th style="text-align:right; padding:10px 12px; font-size:12px; font-weight:600; color:#92400E;">首月曝光</th>
+            <th style="text-align:right; padding:10px 12px; font-size:12px; font-weight:600; color:#92400E;">CTR</th>
+            <th style="text-align:right; padding:10px 12px; font-size:12px; font-weight:600; color:#92400E;">平均排名</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #FDE68A;">
+            <td style="padding:10px 12px; font-family:'DM Mono',monospace;">7/10</td>
+            <td style="padding:10px 12px;">2026 150cc 機車推薦：勁戰七代 XR、SYM Jet SL 158、KYMCO RTS R 165</td>
+            <td style="padding:10px 12px; text-align:right; font-family:'DM Mono',monospace; font-weight:700; color:#B45309;">29</td>
+            <td style="padding:10px 12px; text-align:right; font-family:'DM Mono',monospace;">428</td>
+            <td style="padding:10px 12px; text-align:right; font-family:'DM Mono',monospace; color:#065F46; font-weight:600;">6.78%</td>
+            <td style="padding:10px 12px; text-align:right; font-family:'DM Mono',monospace;">5.25</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 12px; font-family:'DM Mono',monospace;">7/21</td>
+            <td style="padding:10px 12px;">2026 SYM Jet SL 大改款完整解析：新舊差在哪、C-TCS 值不值得</td>
+            <td style="padding:10px 12px; text-align:right; font-family:'DM Mono',monospace; font-weight:700; color:#B45309;">6</td>
+            <td style="padding:10px 12px; text-align:right; font-family:'DM Mono',monospace;">159</td>
+            <td style="padding:10px 12px; text-align:right; font-family:'DM Mono',monospace; color:#065F46; font-weight:600;">3.77%</td>
+            <td style="padding:10px 12px; text-align:right; font-family:'DM Mono',monospace;">7.19</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="font-size:12px; color:#78350F; line-height:1.75; margin-top:14px;">
+        💡 <strong>7/10 新文的關鍵成果</strong>：文章上線後，關鍵字「2026 150cc 機車推薦」在 Google 搜尋<strong>首次進入 AI 摘要第 1 名</strong>，
+        一般搜尋也從第 1 頁第 9 名躍升至第 1 頁第 3 名（詳見下方「品牌關鍵詞 SERP 排名追蹤」）。
+        <strong>SEO 內容布局 → 排名進步 → 曝光轉點擊</strong>的完整鏈條在本期清楚呈現，驗證年度策略字持續更新的重要性。
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4 關鍵字搜尋表現 Top 15 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">四</div>
+      <div class="section-title">關鍵字搜尋表現 Top 15</div>
+      <div class="section-period">Google Search Console 點擊數排序</div>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>關鍵字</th>
+          <th style="text-align:right;">點擊</th>
+          <th style="text-align:right;">曝光</th>
+          <th style="text-align:right;">點閱率</th>
+          <th style="text-align:right;">平均排名</th>
+          <th style="text-align:right;">與上期比較</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="rank top3">1</span></td>
+          <td><strong>二手機車</strong></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">60</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">2,058</td>
+          <td style="text-align:right;">2.92%</td>
+          <td style="text-align:right;">11.47</td>
+          <td style="text-align:right;"><span class="tag-down">↓ -39%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank top3">2</span></td>
+          <td><strong>150cc 機車推薦</strong></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">53</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">1,118</td>
+          <td style="text-align:right;">4.74%</td>
+          <td style="text-align:right;">6.02</td>
+          <td style="text-align:right;"><span class="tag-up">↑ +6%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank top3">3</span></td>
+          <td><strong>二手機車估價</strong> <span class="new-badge">新進榜</span></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">31</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">476</td>
+          <td style="text-align:right;">6.51%</td>
+          <td style="text-align:right;">7.93</td>
+          <td style="text-align:right;"><span class="tag-up">↑ 新進榜</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">4</span></td>
+          <td><strong>150 機車推薦</strong></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">24</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">432</td>
+          <td style="text-align:right;">5.56%</td>
+          <td style="text-align:right;">6.26</td>
+          <td style="text-align:right;"><span class="tag-up">↑ +9%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">5</span></td>
+          <td><strong>映象車業</strong> 🏷️</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">22</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">108</td>
+          <td style="text-align:right;">20.37%</td>
+          <td style="text-align:right;">1.06</td>
+          <td style="text-align:right;"><span class="tag-up">↑ +22% <span class="new-badge">CTR 突破 20%</span></span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">6</span></td>
+          <td><strong>CP 值高的 150 機車</strong></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">18</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">303</td>
+          <td style="text-align:right;">5.94%</td>
+          <td style="text-align:right;">5.55</td>
+          <td style="text-align:right;"><span class="tag-down">↓ -5%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">7</span></td>
+          <td><strong>曼巴機車</strong> <span class="new-badge">高曝光</span></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">14</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">3,504</td>
+          <td style="text-align:right;">0.40%</td>
+          <td style="text-align:right;">1.00</td>
+          <td style="text-align:right;"><span class="tag-up">↑ +40%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">8</span></td>
+          <td><strong>中古機車</strong></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">13</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">934</td>
+          <td style="text-align:right;">1.39%</td>
+          <td style="text-align:right;">10.54</td>
+          <td style="text-align:right;"><span class="tag-down">↓ -55%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">8</span></td>
+          <td><strong>二手機車行</strong></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">13</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">202</td>
+          <td style="text-align:right;">6.44%</td>
+          <td style="text-align:right;">7.48</td>
+          <td style="text-align:right;"><span class="tag-up">↑ +30%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">10</span></td>
+          <td><strong>機車 150 推薦</strong></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">12</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">242</td>
+          <td style="text-align:right;">4.96%</td>
+          <td style="text-align:right;">6.07</td>
+          <td style="text-align:right;"><span class="tag-flat">持平</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">11</span></td>
+          <td><strong>勁戰三代</strong></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">11</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">1,938</td>
+          <td style="text-align:right;">0.57%</td>
+          <td style="text-align:right;">1.23</td>
+          <td style="text-align:right;"><span class="tag-up">↑ +10%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">12</span></td>
+          <td><strong>150 機車</strong></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">9</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">1,186</td>
+          <td style="text-align:right;">0.76%</td>
+          <td style="text-align:right;">5.15</td>
+          <td style="text-align:right;"><span class="tag-flat">持平</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">13</span></td>
+          <td><strong>150 摩托車推薦</strong> <span class="new-badge">高 CTR</span></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">6</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">49</td>
+          <td style="text-align:right;">12.24%</td>
+          <td style="text-align:right;">4.20</td>
+          <td style="text-align:right;"><span class="tag-up">↑ 新進榜</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">13</span></td>
+          <td><strong>WoWoW 100 通病</strong></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">6</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">76</td>
+          <td style="text-align:right;">7.89%</td>
+          <td style="text-align:right;">2.59</td>
+          <td style="text-align:right;"><span class="tag-up">↑ +20%</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank">13</span></td>
+          <td><strong>載貨機車推薦</strong> <span class="new-badge">高名次</span></td>
+          <td style="text-align:right; font-family:'DM Mono',monospace; font-weight:700;">6</td>
+          <td style="text-align:right; font-family:'DM Mono',monospace;">319</td>
+          <td style="text-align:right;">1.88%</td>
+          <td style="text-align:right;">1.06</td>
+          <td style="text-align:right;"><span class="tag-up">↑ 新進榜</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note-box">
+      💡 <strong>關鍵字觀察</strong>：<br>
+      ① <strong>「映象車業」品牌字 CTR 突破 20.37%</strong>（22 次點擊 / 108 次曝光），品牌搜尋率創新高，代表消費者主動指名映象車業的比例明顯提升。<br>
+      ② <strong>「二手機車估價」新進榜 Top 3</strong>（31 次點擊、CTR 6.51%）──「估價」意圖字群成為本期新亮點，反映想賣車、想了解行情的用戶明顯增加。<br>
+      ③ <strong>「二手機車」大詞退縮（99 → 60，↓39%）與「中古機車」退步（29 → 13，↓55%）</strong>：兩大核心通用詞同步下滑，推測與競爭者投放/內容更新有關；但長尾字（150cc 推薦、二手機車估價、載貨機車推薦、150 摩托車推薦）反而多字群成長，代表流量結構往<strong>精準搜尋意圖</strong>轉移，總點擊量並未受影響。<br>
+      ④ <strong>「載貨機車推薦」平均排名 1.06 且新進榜</strong>，是本期新崛起的通勤／工作用車客群關鍵字，值得關注後續動能。
+    </div>
+
+    <!-- 品牌關鍵詞 SERP 排名追蹤 -->
+    <div class="sub-divider"><span>品 牌 關 鍵 詞 SERP 排 名 追 蹤</span></div>
+
+    <div style="font-size:12px; color:var(--gray-500); margin-bottom:14px; line-height:1.7;">
+      ※ 排名格式「X-Y」代表 Google 搜尋結果<strong>第 X 頁、第 Y 名</strong>（每頁 10 個結果）。<br>
+      ※ 對比 2026/7/30 vs 2026/6/29 兩次手動查詢結果；「AI 摘要」欄位表示該關鍵詞是否被 Google AI Overview 引用。
+    </div>
+
+    <table class="serp-table">
+      <thead>
+        <tr>
+          <th style="width:32%;">關鍵詞</th>
+          <th style="width:13%; text-align:center;">本期 AI 摘要</th>
+          <th style="width:13%; text-align:center;">本期一般搜尋</th>
+          <th style="width:13%; text-align:center;">上期 AI 摘要</th>
+          <th style="width:13%; text-align:center;">上期一般搜尋</th>
+          <th style="width:16%;">變化</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="grp-row"><td colspan="6">A. 2026 年度策略字（年度購車）</td></tr>
+        <tr>
+          <td>2026 機車推薦</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">未上榜</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">4-3</span></td>
+          <td><span class="tag-down">↓ 退出榜外</span></td>
+        </tr>
+        <tr>
+          <td>2026 平價 125 機車推薦</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">6-4</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">7-2</span></td>
+          <td><span class="tag-up">↑ 略進步</span></td>
+        </tr>
+        <tr style="background:#FEF3C7;">
+          <td><strong>2026 150cc 機車推薦</strong> <span class="new-badge">7/10 新文推動</span></td>
+          <td style="text-align:center;"><span class="serp-ai-yes">1-1</span></td>
+          <td style="text-align:center;"><span class="serp-pos">1-3</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">1-9</span></td>
+          <td><span class="tag-up">★★ AI 摘要新進第 1 名 + 一般大幅進步</span></td>
+        </tr>
+        <tr>
+          <td>2026 新手機車推薦</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">3-5</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">3-9</span></td>
+          <td><span class="tag-up">↑ 同頁進步</span></td>
+        </tr>
+
+        <tr class="grp-row"><td colspan="6">B. 核心交易意圖字</td></tr>
+        <tr>
+          <td>二手機車</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">2-1</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">2-1</span></td>
+          <td><span class="tag-flat">持平</span></td>
+        </tr>
+        <tr>
+          <td>中古機車</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">2-1</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">2-7</span></td>
+          <td><span class="tag-up">↑ 同頁進步 6 名</span></td>
+        </tr>
+        <tr style="background:#F0FDF4;">
+          <td><strong>二手機車收購</strong></td>
+          <td style="text-align:center;"><span class="serp-ai-yes">1-3</span></td>
+          <td style="text-align:center;"><span class="serp-pos">1-7</span></td>
+          <td style="text-align:center;"><span class="serp-ai-yes">1-5</span></td>
+          <td style="text-align:center;"><span class="serp-pos">1-10</span></td>
+          <td><span class="tag-up">↑ AI 摘要進步 2 名、一般再進 3 名</span></td>
+        </tr>
+        <tr>
+          <td>機車高價收購</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">1-9</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">2-1</span></td>
+          <td><span class="tag-up">↑ 進入第 1 頁</span></td>
+        </tr>
+        <tr style="background:#F0FDF4;">
+          <td><strong>二手機車高價收購</strong></td>
+          <td style="text-align:center;"><span class="serp-ai-yes">1-3</span></td>
+          <td style="text-align:center;"><span class="serp-pos">1-7</span></td>
+          <td style="text-align:center;"><span class="serp-ai-yes">2-1</span></td>
+          <td style="text-align:center;"><span class="serp-pos">2-7</span></td>
+          <td><span class="tag-up">↑ AI 摘要與一般雙雙進步</span></td>
+        </tr>
+        <tr>
+          <td>中古機車高價收購</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">1-5</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">1-5</span></td>
+          <td><span class="tag-flat">持平</span></td>
+        </tr>
+        <tr>
+          <td>台北二手機車</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">2-2</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">1-4</span></td>
+          <td><span class="tag-down">↓ 退至第 2 頁</span></td>
+        </tr>
+
+        <tr class="grp-row"><td colspan="6">C. AI 問句／知識型關鍵字</td></tr>
+        <tr>
+          <td>二手機車買賣流程</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">2-2</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">2-3</span></td>
+          <td><span class="tag-up">↑ 同頁進步</span></td>
+        </tr>
+        <tr>
+          <td>二手機車估價流程是什麼</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">4-4</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">2-7</span></td>
+          <td><span class="tag-down">↓ 觀察中</span></td>
+        </tr>
+        <tr>
+          <td>機車吃機油原因與維修費用</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">6-5</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">3-3</span></td>
+          <td><span class="tag-down">↓ 觀察中</span></td>
+        </tr>
+        <tr>
+          <td>機車排氣檢驗沒過怎麼辦</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">3-1</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">2-6</span></td>
+          <td><span class="tag-flat">名次接近、頁數略退</span></td>
+        </tr>
+        <tr>
+          <td>ABS 與 TCS 機車哪個比較安全</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">2-1</span></td>
+          <td style="text-align:center;"><span class="serp-ai-yes">1-5</span></td>
+          <td style="text-align:center;"><span class="serp-pos">1-9</span></td>
+          <td><span class="tag-flat">AI 摘要暫退、一般接近前頁</span></td>
+        </tr>
+        <tr>
+          <td>機車過戶費用 2026</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">2-2</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">3-3</span></td>
+          <td><span class="tag-up">↑ 進步至第 2 頁</span></td>
+        </tr>
+
+        <tr class="grp-row"><td colspan="6">D. 新進榜字（本期新出現）</td></tr>
+        <tr>
+          <td>CP 值最高的 125 機車 2026</td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-pos">3-2</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">無</span></td>
+          <td style="text-align:center;"><span class="serp-ai-no">未上榜</span></td>
+          <td><span class="tag-up">↑ 新進榜</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note-box" style="margin-top:18px; background:#F0FDF4; border-color:#27ae60; color:#166534;">
+      🎯 <strong>SERP 觀察重點</strong>：<br>
+      ① <strong>「2026 150cc 機車推薦」是本期最大 SEO 勝利</strong>──7/10 發布新文後，該關鍵字首次進入 Google AI 摘要第 1 名，一般搜尋也從 1-9 大幅進步至 1-3。這是內容發布 → 排名進步 → 流量成長的完整鏈條。<br>
+      ② <strong>收購字群三箭齊發</strong>：「二手機車收購」（AI 摘要 1-5 → 1-3）、「二手機車高價收購」（AI 摘要 2-1 → 1-3）、「機車高價收購」（2-1 → 1-9）全數進步，配合站上 /sell/ 頁面點擊翻倍（+109%），是本期第二大成果。<br>
+      ③ <strong>「中古機車」同頁大幅進步 6 名</strong>（2-7 → 2-1），距離第 1 頁只差一位，值得下期持續觀察。<br>
+      ④ <strong>3 個關鍵字表現需持續觀察</strong>：「ABS 與 TCS 機車」AI 摘要暫時未見引用、「二手機車估價流程」與「機車吃機油」名次略退。單月變動可能是 AI 摘要輪替或演算法波動，建議下期若持續退再安排優化。
+    </div>
+  </div>
+
+  <!-- SECTION 5 諮詢互動分析 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">五</div>
+      <div class="section-title">「我要買車」諮詢互動分析</div>
+      <div class="section-period">click_link_buy 事件</div>
+    </div>
+
+    <div class="inquiry-stats">
+      <div class="inq-card orange">
+        <div class="lbl">本期諮詢按鈕點擊總數</div>
+        <div class="val">57<span class="unit"> 次</span></div>
+        <div class="delta up">↑ +14%　較上期 50 次</div>
+      </div>
+      <div class="inq-card">
+        <div class="lbl">LINE 諮詢點擊</div>
+        <div class="val">412<span class="unit"> 次</span></div>
+        <div class="delta" style="color:rgba(255,255,255,0.5);">↓ -1.7%　較上期 419 次（大致持平）</div>
+      </div>
+      <div class="inq-card">
+        <div class="lbl">click_link_buy 獨立使用者</div>
+        <div class="val">55<span class="unit"> 人</span></div>
+        <div class="delta up">↑ +14.6%　較上期 48 人</div>
+      </div>
+    </div>
+
+    <div style="font-size:13px; font-weight:600; color:var(--navy); margin-bottom:14px;">
+      🏆 本期車款諮詢排行（共 13 款車型有帶車款參數，以下為完整清單）
+    </div>
+
+    <div class="moto-grid">
+      <div class="moto-card">
+        <div class="moto-rank gold">1</div>
+        <div class="moto-name">Jet SL</div>
+        <div class="moto-count">2</div>
+      </div>
+      <div class="moto-card">
+        <div class="moto-rank gold">1</div>
+        <div class="moto-name">全新迪爵 碟煞版</div>
+        <div class="moto-count">2</div>
+      </div>
+      <div class="moto-card">
+        <div class="moto-rank gold">1</div>
+        <div class="moto-name">勁戰四代</div>
+        <div class="moto-count">2</div>
+      </div>
+      <div class="moto-card">
+        <div class="moto-rank gold">1</div>
+        <div class="moto-name">勁豪 125 UBS</div>
+        <div class="moto-count">2</div>
+      </div>
+      <div class="moto-card">
+        <div class="moto-rank gold">1</div>
+        <div class="moto-name">活力 125 ABS</div>
+        <div class="moto-count">2</div>
+      </div>
+      <div class="moto-card">
+        <div class="moto-rank">6</div>
+        <div class="moto-name">4mica</div>
+        <div class="moto-count">1</div>
+      </div>
+      <div class="moto-card">
+        <div class="moto-rank">6</div>
+        <div class="moto-name">DRG 1.0 六期</div>
+        <div class="moto-count">1</div>
+      </div>
+      <div class="moto-card">
+        <div class="moto-rank">6</div>
+        <div class="moto-name">FORCE 155</div>
+        <div class="moto-count">1</div>
+      </div>
+      <div class="moto-card">
+        <div class="moto-rank">6</div>
+        <div class="moto-name">Jet SL158</div>
+        <div class="moto-count">1</div>
+      </div>
+      <div class="moto-card">
+        <div class="moto-rank">6</div>
+        <div class="moto-name">勁戰 6.5 代 (ABS+TCS)</div>
+        <div class="moto-count">1</div>
+      </div>
+      <div class="moto-card">
+        <div class="moto-rank">6</div>
+        <div class="moto-name">新名流 125 ABS</div>
+        <div class="moto-count">1</div>
+      </div>
+      <div class="moto-card">
+        <div class="moto-rank">6</div>
+        <div class="moto-name">新豪邁</div>
+        <div class="moto-count">1</div>
+      </div>
+      <div class="moto-card">
+        <div class="moto-rank">6</div>
+        <div class="moto-name">水冷 BWS</div>
+        <div class="moto-count">1</div>
+      </div>
+    </div>
+
+    <div class="note-box" style="margin-top:16px;">
+      📌 <strong>車款組成觀察</strong>：本期諮詢按鈕總點擊回升至 <strong>57 次（↑14%）</strong>，獨立詢問人數也回升至 55 人。
+      車款組成明顯回到<strong>「125cc 平價通勤款」為主力</strong>──全新迪爵 碟煞版、勁豪 125 UBS、活力 125 ABS 等經典通勤車並列榜首（各 2 次），
+      搭配運動型的 Jet SL 與勁戰四代同樣入榜。與上期以 GP 125、Smax 系列為主的組成類似，代表<strong>「畢業季 → 暑假通勤 → 開學前準備」</strong>的購車熱潮延續，
+      客群仍以學生族、社會新鮮人、通勤族為主。
+      <br><br>
+      💬 <strong>互動數據綜合走勢</strong>：本期「我要買車」按鈕點擊 <strong>57 次（↑14%）</strong>與獨立使用者<strong> 55 人（↑15%）</strong>雙雙回升，
+      LINE 諮詢點擊 <strong>412 次</strong>維持穩定水位，整體購車意向指標明顯優於上期。
+      Facebook 外連點擊也大幅上升（15 → 23 次，↑53%），代表社群導流轉化效果提升。
+    </div>
+  </div>
+
+  <!-- SECTION 6 結論與操作建議 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">六</div>
+      <div class="section-title">結論與操作建議</div>
+    </div>
+
+    <div style="font-size:12px; font-weight:600; color:var(--gray-500); letter-spacing:0.1em; margin-bottom:16px;">─ ─ 數 據 代 表 什 麼</div>
+
+    <div class="conclusion-grid">
+      <div class="conc-card good">
+        <div class="conc-icon">✅</div>
+        <div class="conc-title">新文即時見效：SEO 執行成果具體浮現</div>
+        <div class="conc-body">
+          7/10 發布的<strong>「2026 150cc 機車推薦」新文章</strong>直接推動該關鍵字在 Google 首次進入 <strong>AI 摘要第 1 名</strong>，
+          一般搜尋也從 1-9 大幅進步至 1-3，同時文章本身首月即獲 29 次點擊入榜熱門頁面。
+          這是<strong>「發文 → 排名 → 流量」完整鏈條的具體驗證</strong>，也代表每月一篇的部落格經營策略正在發揮長期效益。
+        </div>
+      </div>
+      <div class="conc-card good">
+        <div class="conc-icon">✅</div>
+        <div class="conc-title">AI 搜尋管道爆發成長，GEO 布局奏效</div>
+        <div class="conc-body">
+          AI 助理管道流量從上期 6 次躍升至本期 <strong>26 次（+333%）</strong>，代表 ChatGPT、Perplexity、Gemini
+          等新型 AI 搜尋工具引用映象車業內容的頻率大幅提升。此外「二手機車收購」「二手機車高價收購」等收購字群持續獲得 <strong>AI 摘要引用並排名進步</strong>，
+          映象車業正穩定成為 AI 搜尋時代的權威資訊來源。
+        </div>
+      </div>
+      <div class="conc-card good">
+        <div class="conc-icon">✅</div>
+        <div class="conc-title">收購服務三箭齊發，賣車客群明顯增加</div>
+        <div class="conc-body">
+          收購頁面 /sell/ 點擊數<strong>翻倍成長 +109%（56 → 117 次）</strong>；同時「二手機車收購」「二手機車高價收購」「機車高價收購」三個相關關鍵字搜尋排名同步進步。
+          代表想賣車、換車的潛在客戶明顯增加，是本期<strong>把握商機的重點方向</strong>。
+        </div>
+      </div>
+      <div class="conc-card action">
+        <div class="conc-icon">💡</div>
+        <div class="conc-title">品牌搜尋達 20% CTR 新高，購車意向指標回升</div>
+        <div class="conc-body">
+          品牌字「映象車業」點閱率突破 <strong>20.37%</strong>（22 次點擊/108 次曝光），創下歷史新高，
+          搭配「我要買車」按鈕點擊回升至 <strong>57 次（↑14%）</strong>與 LINE 諮詢維持 412 次穩定水位，
+          代表主動指名映象車業並準備進入詢問的客戶明顯增加。
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size:12px; font-weight:600; color:var(--gray-500); letter-spacing:0.1em; margin: 24px 0 16px;">─ ─ 本 月 可 以 做 什 麼</div>
+
+    <div class="action-list">
+      <div class="action-item">
+        <div class="action-icon">📝</div>
+        <div>
+          <div class="action-title">本月部落格選題建議：150cc 水冷跑旅馬力對決專文</div>
+          <div class="action-body">
+            本期「2026 150cc 機車推薦」新文成效卓著，建議<strong>乘勝追擊</strong>，本月延續 150cc 主題推出「2026 150cc 水冷跑旅完整馬力排名 & 保值率分析」，
+            鎖定暑假出遊季、熱血騎士與高單價二手機車客群（DRG、MMBCU、KRV 等）。此類「規格對決」型內容有機會複製本期進 AI 摘要的成功經驗。
+          </div>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon">📣</div>
+        <div>
+          <div class="action-title">收購服務乘勝追擊，社群導流放大聲量</div>
+          <div class="action-body">
+            收購頁流量翻倍是本期最大機會點。建議搭配 8 月在 Facebook／Instagram 發布「舊車換新學 - 30 秒 LINE 免費估價」「開學前，把閒置的舊車變成學費」等主題貼文，
+            將搜尋流量再放大成社群曝光。
+          </div>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon">📱</div>
+        <div>
+          <div class="action-title">LINE 官方帳號補強「熱門通勤 125cc」快速回覆模板</div>
+          <div class="action-body">
+            本期諮詢主力為全新迪爵 碟煞版、勁豪 125 UBS、活力 125 ABS、勁戰四代、Jet SL 等 125-155cc 通勤與運動車款。
+            建議在 LINE 官方帳號預先設好這幾款的常見問題自動回覆（車況、里程、價格區間、分期條件），
+            並針對開學季前推出「學生族分期方案懶人包」加強成交轉化。
+          </div>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon">🎯</div>
+        <div>
+          <div class="action-title">社群主題：暑期出遊 × 跑旅車主日常</div>
+          <div class="action-body">
+            延續 8 月暑假出遊季的購車情境，社群主題可設計「跑旅車主的一日出遊」「新手上路第一輛 150cc 選什麼」場景化貼文；
+            同時可配合本期新文推出短影音版本「三款 150cc 新車一分鐘看完」，把部落格流量延伸到社群曝光。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">
+      本報表由 <strong style="color:rgba(255,255,255,0.7);">筑今數位設計</strong> 製作提供<br>
+      資料來源：Google Analytics 4 ／ Google Search Console
+    </div>
+    <div class="footer-right">
+      REPORT DATE：2026.07.30<br>
+      PERIOD：2026/06/29 — 2026/07/28
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
